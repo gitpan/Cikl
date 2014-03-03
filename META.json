@@ -93,7 +93,7 @@
    "provides" : {
       "Cikl" : {
          "file" : "lib/Cikl.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "Cikl::AddressBuilder" : {
          "file" : "lib/Cikl/AddressBuilder.pm"
@@ -280,7 +280,7 @@
       },
       "Cikl::Smrt" : {
          "file" : "lib/Cikl/Smrt.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "Cikl::Smrt::AutoDecodableRole" : {
          "file" : "lib/Cikl/Smrt/AutoDecodableRole.pm"
@@ -378,7 +378,7 @@
          "web" : "https://github.com/cikl/p5-Cikl"
       }
    },
-   "version" : "0.03",
+   "version" : "0.04",
    "x_contributors" : [
       "Kevin Benton <blak111@gmail.com>",
       "Aaron K. Reffett <akreffett@cert.org>",
