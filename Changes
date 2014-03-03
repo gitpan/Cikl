@@ -1,0 +1,20 @@
+Revision history for Perl extension Cikl
+
+0.03 2014-03-03T19:16:36Z
+
+    - Try pushing our stuff up to CPAN
+
+0.02 2014-03-03T17:28:32Z
+
+    - Clean up dependencies
+      - Set minimum version of perl to 5.014
+      - Stop using MouseX::NativeTraits - we really don't benefit.
+      - Remove lots of unused stuff.
+
+    - Require Cikl::DataTypes::* explicitly (was seeing dependency issues on 
+      travis)
+
+0.01 2014-02-27T20:01:29Z
+
+    - original version
+
