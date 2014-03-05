@@ -29,7 +29,7 @@ no_index:
 provides:
   Cikl:
     file: lib/Cikl.pm
-    version: 0.04
+    version: v0.4.1
   Cikl::AddressBuilder:
     file: lib/Cikl/AddressBuilder.pm
   Cikl::Authentication::Factory:
@@ -154,7 +154,7 @@ provides:
     file: lib/Cikl/Router/Transport/RabbitMQ/SubmissionConsumer.pm
   Cikl::Smrt:
     file: lib/Cikl/Smrt.pm
-    version: 0.04
+    version: v0.4.1
   Cikl::Smrt::AutoDecodableRole:
     file: lib/Cikl/Smrt/AutoDecodableRole.pm
   Cikl::Smrt::Broker:
@@ -254,7 +254,7 @@ resources:
   bugtracker: https://github.com/cikl/p5-Cikl/issues
   homepage: https://github.com/cikl/p5-Cikl
   repository: git://github.com/cikl/p5-Cikl.git
-version: 0.04
+version: 0.4.1
 x_contributors:
   - 'Kevin Benton <blak111@gmail.com>'
   - 'Aaron K. Reffett <akreffett@cert.org>'
