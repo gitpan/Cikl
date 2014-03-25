@@ -31,11 +31,13 @@ requires 'Text::Table', '1.127';
 requires 'Time::HiRes', '1.972101';
 requires 'Try::Tiny', '0.11';
 requires 'XML::LibXML', '1.89';
+requires 'namespace::autoclean';
 
 requires 'Log::Log4perl';
 
 on 'test' => sub {
   requires 'Test::Class', '0.41';
+  requires 'Test::Deep';
   requires 'Test::Exception', '0.32';
 };
 

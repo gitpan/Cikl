@@ -1,5 +1,10 @@
 Revision history for Perl extension Cikl
 
+0.5.1 2014-03-25T22:00:50Z
+    - Fixed missing dependencies
+
+    - Moved rules/feeds out to cikl/cikl-feeds
+
 0.5.0 2014-03-25T16:00:04Z
     - Stripped out all the server-side code, given that we are shifting focus
     to using Logstash as the 'backend'. 
