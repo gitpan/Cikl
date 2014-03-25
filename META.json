@@ -1,7 +1,7 @@
 {
    "abstract" : "It's new $module",
    "author" : [
-      "Mike Ryan <falter at gmail.com>"
+      "Wes Young (wesyoung.me)"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v0.11.0",
@@ -44,15 +44,12 @@
       "runtime" : {
          "requires" : {
             "AnyEvent" : "7.05",
-            "AnyEvent::RabbitMQ" : "1.15",
             "Config::Simple" : "4.58",
             "Coro" : "6.31",
             "Cwd" : "3.40",
             "DateTime" : "0.70",
             "DateTime::Format::DateParse" : "0.05",
             "DateTime::Format::Strptime" : "1.54",
-            "Digest::MD5" : "2.51",
-            "Digest::SHA" : "5.70",
             "Encode" : "2.44",
             "File::Spec" : "3.40",
             "File::Type" : "0.22",
@@ -63,13 +60,12 @@
             "LWP::UserAgent" : "6.02",
             "LWPx::ParanoidAgent" : "1.09",
             "List::MoreUtils" : "0.33",
-            "Log::Dispatch" : "2.32",
+            "Log::Log4perl" : "0",
             "MIME::Base64" : "3.13",
             "MIME::Lite" : "3.027",
             "Mail::RFC822::Address" : "0.3",
             "Module::Pluggable" : "3.9",
             "Mouse" : "v2.0.0",
-            "Net::RabbitFoot" : "1.03",
             "Net::SSLeay" : "1.43",
             "Regexp::Common" : "2.122",
             "Regexp::Common::net::CIDR" : "0.02",
@@ -78,7 +74,6 @@
             "Text::Table" : "1.127",
             "Time::HiRes" : "1.972101",
             "Try::Tiny" : "0.11",
-            "UUID::Tiny" : "1.04",
             "XML::LibXML" : "1.89",
             "perl" : "5.014"
          }
@@ -93,16 +88,10 @@
    "provides" : {
       "Cikl" : {
          "file" : "lib/Cikl.pm",
-         "version" : "v0.4.1"
+         "version" : "v0.5.0"
       },
       "Cikl::AddressBuilder" : {
          "file" : "lib/Cikl/AddressBuilder.pm"
-      },
-      "Cikl::Authentication::Factory" : {
-         "file" : "lib/Cikl/Authentication/Factory.pm"
-      },
-      "Cikl::Authentication::Role" : {
-         "file" : "lib/Cikl/Authentication/Role.pm"
       },
       "Cikl::Client" : {
          "file" : "lib/Cikl/Client.pm"
@@ -113,23 +102,11 @@
       "Cikl::Client::Transport" : {
          "file" : "lib/Cikl/Client/Transport.pm"
       },
-      "Cikl::Client::Transport::RabbitMQ" : {
-         "file" : "lib/Cikl/Client/Transport/RabbitMQ.pm"
-      },
       "Cikl::Codecs::CodecRole" : {
          "file" : "lib/Cikl/Codecs/CodecRole.pm"
       },
       "Cikl::Codecs::JSON" : {
          "file" : "lib/Cikl/Codecs/JSON.pm"
-      },
-      "Cikl::Common::RabbitMQRole" : {
-         "file" : "lib/Cikl/Common/RabbitMQRole.pm"
-      },
-      "Cikl::DataStore::Factory" : {
-         "file" : "lib/Cikl/DataStore/Factory.pm"
-      },
-      "Cikl::DataStore::Role" : {
-         "file" : "lib/Cikl/DataStore/Role.pm"
       },
       "Cikl::DataTypes::Asn" : {
          "file" : "lib/Cikl/DataTypes/Asn.pm"
@@ -152,9 +129,6 @@
       "Cikl::DataTypes::LowerCaseStr" : {
          "file" : "lib/Cikl/DataTypes/LowerCaseStr.pm"
       },
-      "Cikl::DataTypes::LowercaseUUID" : {
-         "file" : "lib/Cikl/DataTypes/LowercaseUUID.pm"
-      },
       "Cikl::DataTypes::PortList" : {
          "file" : "lib/Cikl/DataTypes/PortList.pm"
       },
@@ -163,6 +137,9 @@
       },
       "Cikl::EventBuilder" : {
          "file" : "lib/Cikl/EventBuilder.pm"
+      },
+      "Cikl::Logging" : {
+         "file" : "lib/Cikl/Logging.pm"
       },
       "Cikl::Models::Address::asn" : {
          "file" : "lib/Cikl/Models/Address/asn.pm"
@@ -188,99 +165,9 @@
       "Cikl::Models::Event" : {
          "file" : "lib/Cikl/Models/Event.pm"
       },
-      "Cikl::Models::HostInfo" : {
-         "file" : "lib/Cikl/Models/HostInfo.pm"
-      },
-      "Cikl::Models::Query" : {
-         "file" : "lib/Cikl/Models/Query.pm"
-      },
-      "Cikl::Models::QueryAddress" : {
-         "file" : "lib/Cikl/Models/QueryAddress.pm"
-      },
-      "Cikl::Models::QueryRange" : {
-         "file" : "lib/Cikl/Models/QueryRange.pm"
-      },
-      "Cikl::Models::QueryResults" : {
-         "file" : "lib/Cikl/Models/QueryResults.pm"
-      },
-      "Cikl::Models::Submission" : {
-         "file" : "lib/Cikl/Models/Submission.pm"
-      },
-      "Cikl::QueryHandler::Factory" : {
-         "file" : "lib/Cikl/QueryHandler/Factory.pm"
-      },
-      "Cikl::QueryHandler::Role" : {
-         "file" : "lib/Cikl/QueryHandler/Role.pm"
-      },
-      "Cikl::Report::CSVFormatter" : {
-         "file" : "lib/Cikl/Report/CSVFormatter.pm"
-      },
-      "Cikl::Report::Formatter" : {
-         "file" : "lib/Cikl/Report/Formatter.pm"
-      },
-      "Cikl::Report::Output" : {
-         "file" : "lib/Cikl/Report/Output.pm"
-      },
-      "Cikl::Report::QueryResultsReport" : {
-         "file" : "lib/Cikl/Report/QueryResultsReport.pm"
-      },
-      "Cikl::Report::ReportInterface" : {
-         "file" : "lib/Cikl/Report/ReportInterface.pm"
-      },
-      "Cikl::Report::TableFormatter" : {
-         "file" : "lib/Cikl/Report/TableFormatter.pm"
-      },
-      "Cikl::Router::AuthenticatedRole" : {
-         "file" : "lib/Cikl/Router/AuthenticatedRole.pm"
-      },
-      "Cikl::Router::Constants" : {
-         "file" : "lib/Cikl/Router/Constants.pm"
-      },
-      "Cikl::Router::DataSubmissionRole" : {
-         "file" : "lib/Cikl/Router/DataSubmissionRole.pm"
-      },
-      "Cikl::Router::QueryHandlingRole" : {
-         "file" : "lib/Cikl/Router/QueryHandlingRole.pm"
-      },
-      "Cikl::Router::Server" : {
-         "file" : "lib/Cikl/Router/Server.pm"
-      },
-      "Cikl::Router::ServerFactory" : {
-         "file" : "lib/Cikl/Router/ServerFactory.pm"
-      },
-      "Cikl::Router::ServiceRole" : {
-         "file" : "lib/Cikl/Router/ServiceRole.pm"
-      },
-      "Cikl::Router::Services" : {
-         "file" : "lib/Cikl/Router/Services.pm"
-      },
-      "Cikl::Router::Services::Control" : {
-         "file" : "lib/Cikl/Router/Services/Control.pm"
-      },
-      "Cikl::Router::Services::Query" : {
-         "file" : "lib/Cikl/Router/Services/Query.pm"
-      },
-      "Cikl::Router::Services::Submission" : {
-         "file" : "lib/Cikl/Router/Services/Submission.pm"
-      },
-      "Cikl::Router::Transport" : {
-         "file" : "lib/Cikl/Router/Transport.pm"
-      },
-      "Cikl::Router::Transport::RabbitMQ" : {
-         "file" : "lib/Cikl/Router/Transport/RabbitMQ.pm"
-      },
-      "Cikl::Router::Transport::RabbitMQ::Consumer" : {
-         "file" : "lib/Cikl/Router/Transport/RabbitMQ/Consumer.pm"
-      },
-      "Cikl::Router::Transport::RabbitMQ::DeferredAcker" : {
-         "file" : "lib/Cikl/Router/Transport/RabbitMQ/DeferredAcker.pm"
-      },
-      "Cikl::Router::Transport::RabbitMQ::SubmissionConsumer" : {
-         "file" : "lib/Cikl/Router/Transport/RabbitMQ/SubmissionConsumer.pm"
-      },
       "Cikl::Smrt" : {
          "file" : "lib/Cikl/Smrt.pm",
-         "version" : "v0.4.1"
+         "version" : "v0.5.0"
       },
       "Cikl::Smrt::AutoDecodableRole" : {
          "file" : "lib/Cikl/Smrt/AutoDecodableRole.pm"
@@ -357,12 +244,6 @@
       "Cikl::Smrt::Parsers::ParseXPath" : {
          "file" : "lib/Cikl/Smrt/Parsers/ParseXPath.pm"
       },
-      "Cikl::Util::Flushable" : {
-         "file" : "lib/Cikl/Util/Flushable.pm"
-      },
-      "Cikl::Util::Flusher" : {
-         "file" : "lib/Cikl/Util/Flusher.pm"
-      },
       "Cikl::Util::TimeHelpers" : {
          "file" : "lib/Cikl/Util/TimeHelpers.pm"
       }
@@ -378,7 +259,7 @@
          "web" : "https://github.com/cikl/p5-Cikl"
       }
    },
-   "version" : "0.4.1",
+   "version" : "0.5.0",
    "x_contributors" : [
       "Kevin Benton <blak111@gmail.com>",
       "Aaron K. Reffett <akreffett@cert.org>",
